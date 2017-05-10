@@ -2,7 +2,6 @@
 @media only screen and (min-width: 414px) {
   i.fa.fa-bars {
     display: none;
-    color: red;
   }
   .main-nav:hover ul {
     display: block;
