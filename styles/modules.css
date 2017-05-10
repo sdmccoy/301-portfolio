@@ -1,0 +1,28 @@
+
+@media only screen and (min-width: 414px) {
+  .fa-bars {
+    display: none;
+    color: red;
+  }
+  .main-nav:hover ul {
+    display: block;
+  }
+
+  .main-nav ul {
+    display: block;
+    background-color: rgba(83, 148, 0, 0.5);
+    margin: .5% 0%;
+    text-align: center;
+  }
+
+  .main-nav li {
+    display: inline;
+    padding: 0% 1.5%;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.0);
+    font-size: 1em;
+}
+
+@media screen and (min-width: 768px) {
+
+}
