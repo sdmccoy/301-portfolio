@@ -1,0 +1,64 @@
+* {
+  /*outline: 1px solid black;*/
+}
+
+body {
+  background-color: white;
+}
+
+header {
+  background-color: #66d7ee;
+}
+
+.header-box {
+  width: 40%;
+  height: auto;
+  border: 2px white solid;
+  display: block;
+  margin: auto;
+}
+
+.mini-logo {
+  width: 30%;
+  height: auto;
+  display: block;
+  text-align: center;
+  margin: auto;
+  padding: 2% 0%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 100%;
+  color: white;
+}
+
+i {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+}
+
+.main-nav:hover ul {
+  display: block;
+}
+
+ul {
+  display: none;
+}
+
+li {
+  /*color: #86c716;*/
+  color: white;
+  display: block;
+}
+
+
+
+@media screen and (min-width: 414px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
