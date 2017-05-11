@@ -13,6 +13,7 @@ function Project (rawDataObj) {
 
 Project.prototype.toHtml = function () {
   var $newProject = $('section.template').clone();
+  console.log($newProject);
   $newProject.removeClass('template');
   if (!this.publishedOn) {
     $newProject.addClass('draft');
@@ -22,7 +23,7 @@ Project.prototype.toHtml = function () {
   $newProject.find('h2:first').html(this.title);
   $newProject.attr('data-category', this.category);
   $newProject.find('h4 p').html(this.publishedOn);
-  $newProject.find('p:second').html(this.description);
+  $newProject.find('p').html(this.description);
   $newProject.append('<main>');
   return $newProject;
 };
