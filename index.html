@@ -9,6 +9,16 @@
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="styles/icons.css">
     <script src="https://use.fontawesome.com/04031631da.js"></script>
+    <script id="hobbies-template" type="text/x-handlebars-template">
+      <img src="{{image}}" alt="">
+      <h2>{{title}}</h2>
+      <a href="#">
+        <h3>Read more...</h3>
+      </a>
+      <div class="hidden-description">
+        <p>{{description}}</p>
+      </div>
+    </script>
   </head>
   <body>
     <header>
@@ -46,6 +56,9 @@ Hobbies</li>
           <p>Description</p>
         </div>
       </section>
+      <section id="hobbies" class="template" data-category="cat">
+
+      </section>
     </main>
     <footer>
 
@@ -54,5 +67,6 @@ Hobbies</li>
     <script type="text/javascript" src="scripts/rawData.js"></script>
     <script type="text/javascript" src="scripts/project.js"></script>
     <script type="text/javascript" src="scripts/pens.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.amd.min.js"></script>
   </body>
 </html>
