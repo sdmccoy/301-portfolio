@@ -23,4 +23,14 @@ Project.prototype.toHtml = function () {
   $newProject.attr('data-category', this.category);
   $newProject.find('h4 p').html(this.publishedOn);
   $newProject.find('p:second').html(this.description);
+  $newProject.append('<main>');
+  return $newProject;
 };
+
+rawData.forEach(function(projectObject){
+  projects.push(new Project(projectObject));
+});
+
+projects.forEach(function(project) {
+  $('#projects').append(project.toHtml());
+});
