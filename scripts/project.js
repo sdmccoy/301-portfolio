@@ -19,7 +19,7 @@ Project.prototype.toHtml = function () {
     $newProject.addClass('draft');
   }
   $newProject.attr('a', this.url);
-  $newProject.find('img').attr('href', this.image);
+  $newProject.find('.screenshot').attr('src', this.image);
   $newProject.find('h2').html(this.title);
   $newProject.attr('data-category', this.category);
   $newProject.find('p:first').html(this.publishedOn);

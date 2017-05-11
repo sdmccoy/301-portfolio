@@ -48,3 +48,9 @@ li {
 a {
   text-decoration: none;
 }
+
+#projects {
+  width: 100%;
+  height: auto;
+    
+}
