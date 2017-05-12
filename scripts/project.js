@@ -19,11 +19,11 @@ Project.prototype.toHtml = function () {
     $newProject.addClass('draft');
   }
   $newProject.attr('a', this.url);
-  $newProject.find('img').attr('href', this.image);
-  $newProject.find('h2:first').html(this.title);
+  $newProject.find('.screenshot').attr('src', this.image);
+  $newProject.find('h2').html(this.title);
   $newProject.attr('data-category', this.category);
-  $newProject.find('h4 p').html(this.publishedOn);
-  $newProject.find('p').html(this.description);
+  $newProject.find('p:first').html(this.publishedOn);
+  $newProject.find('p:last').html(this.description);
   $newProject.append('<main>');
   return $newProject;
 };
