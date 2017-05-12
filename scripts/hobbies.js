@@ -18,3 +18,7 @@ Hobbies.prototype.toHtml = function () {
 hobbiesRawData.forEach(function(hobbyObject) {
   hobbies.push(new Hobbies(hobbyObject));
 });
+
+hobbies.forEach(function(hobbyObject){
+  $('#hobbies').append(hobbyObject.toHtml());
+});
