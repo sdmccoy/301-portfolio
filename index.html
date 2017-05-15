@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="styles/icons.css">
     <script src="https://use.fontawesome.com/04031631da.js"></script>
+    <section id="projects-template" type="text/x-handlbars-template">
+      <a href="{{url}}" target="_blank">
+        <img class="screenshot" src="{{image}}" alt="">
+        <h2>{{title}}</h2>
+      </a>
+      <h3>Read description</h3>
+      <div class="hidden-description">
+        <h4>Created On: </h4><p>{{publishedOn}}</p>
+        <p>{{description}}</p>
+      </div>
+    </section>
     <script id="hobbies-template" type="text/x-handlebars-template">
       <img src="{{image}}" alt="">
       <h2>{{title}}</h2>
