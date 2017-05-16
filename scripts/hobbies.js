@@ -1,6 +1,6 @@
 'use strict';
 
-var hobbies = [];
+const hobbies = [];
 
 function Hobbies (rawDataObj) {
   this.image = rawDataObj.image;
@@ -10,8 +10,8 @@ function Hobbies (rawDataObj) {
 }
 
 Hobbies.prototype.toHtml = function () {
-  var hobbiesTemplate = $('#hobbies-template').html();
-  var compileTemplate = Handlebars.compile(hobbiesTemplate);
+  let hobbiesTemplate = $('#hobbies-template').html();
+  let compileTemplate = Handlebars.compile(hobbiesTemplate);
   return compileTemplate(this);
 };
 
@@ -20,5 +20,5 @@ hobbiesRawData.forEach(function(hobbyObject) {
 });
 
 hobbies.forEach(function(hobbyObject){
-  $('#hobbies').append(hobbyObject.toHtml());
+  $('#hobbies-content').append(hobbyObject.toHtml());
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-var rawData = [
+var projectRawData = [
   {
     url: 'https://sdmccoy.github.io/justclimb/',
     image: 'assets/justclimb.png',

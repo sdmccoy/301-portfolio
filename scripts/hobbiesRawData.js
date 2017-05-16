@@ -5,7 +5,7 @@ var hobbiesRawData = [
     image: 'assets/outdoorsman.jpeg',
     title: 'Adventurer',
     category: 'hobbies',
-    description: 'An avid outdoorsman continuously seeking next naturally induced rush.'
+    description: 'An avid outdoorsman continuously seeking the next naturally induced rush.'
   },
   {
     image: 'assets/craftsman.jpeg',

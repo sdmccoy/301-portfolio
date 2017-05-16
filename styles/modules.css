@@ -17,11 +17,21 @@
   .main-nav li {
     display: inline;
     padding: 0% 1.5%;
-    margin: auto;
     background-color: rgba(0, 0, 0, 0.0);
     font-size: 1em;
+  }
+
+  section {
+    width: 40%;
+    margin: 10% 5%;
+    border: 2px solid black;
+    float: left;
+  }
 }
 
-@media screen and (min-width: 768px) {
-
+@media screen and (min-width: 640px) {
+  section {
+    width: 30%;
+    margin: 10% 4.16%; 
+  }
 }
