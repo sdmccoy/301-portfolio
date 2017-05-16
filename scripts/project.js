@@ -24,8 +24,3 @@ projectRawData.forEach(function(projectObject){
 projects.forEach(function(project) {
   $('#projects-content').append(project.toHtml());
 });
-
-$('document').ready(function(){
-  $('section').hide();
-  $('#projects-content').fadeIn(250);
-});

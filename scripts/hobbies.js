@@ -20,5 +20,5 @@ hobbiesRawData.forEach(function(hobbyObject) {
 });
 
 hobbies.forEach(function(hobbyObject){
-  $('#hobbies').append(hobbyObject.toHtml());
+  $('#hobbies-content').append(hobbyObject.toHtml());
 });

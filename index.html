@@ -43,17 +43,17 @@
       <nav class="main-nav">
         <i class="fa fa-bars" aria-hidden="true"></i>
         <ul>
-          <a href="index.html">
+          <a id="home" href="index.html">
             <li data-content="home">
               <i class="fa fa-home" aria-hidden="true"></i>
                 Home
             </li>
           </a>
-          <a href="#"><li data-content="projects"><i class="fa fa-globe" aria-hidden="true"></i>Websites</li></a>
-          <a href="#"><li data-content="pens"><i class="fa fa-codepen" aria-hidden="true"></i>Pens</li></a>
-          <a href="https://github.com/sdmccoy" target="_blank"><li data-content="git"><i class="fa fa-github" aria-hidden="true"></i>Git</li></a>
-          <a href="#"><li data-content="hobbies"><i class="fa fa-futbol-o" aria-hidden="true"></i>Hobbies</li></a>
-          <a href="https://www.linkedin.com/in/sdmccoy/" target="_blank"><li data-content="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</li></a>
+          <a id="projects-tab" href="#"><li data-content="projects"><i class="fa fa-globe" aria-hidden="true"></i>Websites</li></a>
+          <a id="pens-tab" href="#"><li data-content="pens"><i class="fa fa-codepen" aria-hidden="true"></i>Pens</li></a>
+          <a id="git-tab" href="https://github.com/sdmccoy" target="_blank"><li data-content="git"><i class="fa fa-github" aria-hidden="true"></i>Git</li></a>
+          <a id="hobbies-tab" href="#"><li data-content="hobbies"><i class="fa fa-futbol-o" aria-hidden="true"></i>Hobbies</li></a>
+          <a id="linkedin-tab" href="https://www.linkedin.com/in/sdmccoy/" target="_blank"><li data-content="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</li></a>
         </ul>
       </nav>
 
@@ -76,10 +76,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
     <script src="scripts/projectsRawData.js"></script>
     <script src="scripts/project.js"></script>
-    <script src="scripts/projectView.js"></script>
     <script src="scripts/hobbiesRawData.js"></script>
     <script src="scripts/hobbies.js"></script>
     <script src="scripts/hobbiesView.js"></script>
     <script src="scripts/pens.js"></script>
+    <script src="scripts/mainView.js"></script>
+    <script>
+    mainNavView.handleMainNav();
+    </script>
   </body>
 </html>
