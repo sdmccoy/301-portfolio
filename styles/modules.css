@@ -30,5 +30,8 @@
 }
 
 @media screen and (min-width: 640px) {
-
+  section {
+    width: 30%;
+    margin: 10% 4.16%; 
+  }
 }
