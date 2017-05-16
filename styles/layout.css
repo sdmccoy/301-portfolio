@@ -1,7 +1,5 @@
 .header-box {
   width: 40%;
-  height: auto;
-  /*border: 2px white solid;*/
   display: block;
   margin: auto;
 
@@ -9,7 +7,6 @@
 
 .mini-logo {
   width: 40%;
-  height: auto;
   display: block;
   text-align: center;
   margin: auto;
@@ -51,11 +48,8 @@ a {
 
 #projects {
   width: 100%;
-  height: auto;
-
 }
 
 img {
   width: 100%;
-  height: auto;
 }
