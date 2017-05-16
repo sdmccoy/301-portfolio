@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="styles/icons.css">
     <script src="https://use.fontawesome.com/04031631da.js"></script>
+    <!-- Start of handlebars template for projects -->
     <section id="projects-template" type="text/x-handlbars-template">
       <a href="{{url}}" target="_blank">
         <img class="screenshot" src="{{image}}" alt="">
@@ -21,6 +22,7 @@
         <p>{{description}}</p>
       </div>
     </section>
+    <!-- Start of handlebars template for hobbies -->
     <script id="hobbies-template" type="text/x-handlebars-template">
       <img src="{{image}}" alt="">
       <h2>{{title}}</h2>
@@ -49,7 +51,7 @@
           </a>
           <a href="#"><li data-content="projects"><i class="fa fa-globe" aria-hidden="true"></i>Websites</li></a>
           <a href="#"><li data-content="pens"><i class="fa fa-codepen" aria-hidden="true"></i>Pens</li></a>
-          <a href="https://github.com/sdmccoy"><li data-content="git"><i class="fa fa-github" aria-hidden="true"></i>Git</li></a>
+          <a href="https://github.com/sdmccoy" target="_blank"><li data-content="git"><i class="fa fa-github" aria-hidden="true"></i>Git</li></a>
           <a href="#"><li data-content="hobbies"><i class="fa fa-futbol-o" aria-hidden="true"></i>Hobbies</li></a>
           <a href="https://www.linkedin.com/in/sdmccoy/" target="_blank"><li data-content="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</li></a>
         </ul>
@@ -57,18 +59,13 @@
 
     </header>
     <main>
-      <section id="projects" class="template" data-category="cat">
-        <a href="" target="_blank">
-          <img class="screenshot" src="" alt="">
-          <h2>Title</h2>
-        </a>
-        <h3>Read description</h3>
-        <div class="hidden-description">
-          <h4>Created On: </h4><p>published on</p>
-          <p>Description</p>
-        </div>
+      <section id="projects-content" class="template" data-category="cat">
+
       </section>
-      <section id="hobbies" class="template" data-category="cat">
+      <section id="pens-content" class="template" data-category="cat">
+
+      </section>
+      <section id="hobbies-content" class="template" data-category="cat">
 
       </section>
     </main>
@@ -77,8 +74,9 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-    <script src="scripts/rawData.js"></script>
+    <script src="scripts/projectsRawData.js"></script>
     <script src="scripts/project.js"></script>
+    <script src="scripts/projectView.js"></script>
     <script src="scripts/hobbiesRawData.js"></script>
     <script src="scripts/hobbies.js"></script>
     <script src="scripts/hobbiesView.js"></script>
