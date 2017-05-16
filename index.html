@@ -11,27 +11,31 @@
     <link rel="stylesheet" href="styles/icons.css">
     <script src="https://use.fontawesome.com/04031631da.js"></script>
     <!-- Start of handlebars template for projects -->
-    <script id="projects-template" type="text/x-handlbars-template">
-      <a href="{{url}}" target="_blank">
-        <img class="screenshot" src="{{image}}" alt="">
-        <h2><span>{{title}}</span></h2>
-      </a>
-      <h3>Read description</h3>
-      <div class="hidden-description">
-        <h4>Created On: </h4><p>{{publishedOn}}</p>
-        <p>{{description}}</p>
-      </div>
+    <script id="projects-template" type="text/x-handlebars-template">
+      <section>
+        <a href="{{url}}" target="_blank">
+          <img class="screenshot" src="{{image}}" alt="">
+          <h2><span>{{title}}</span></h2>
+        </a>
+        <h3>Read description</h3>
+        <div class="hidden-description">
+          <h4>Created On: </h4><p>{{publishedOn}}</p>
+          <p>{{description}}</p>
+        </div>
+      </section>
     </script>
     <!-- Start of handlebars template for hobbies -->
     <script id="hobbies-template" type="text/x-handlebars-template">
-      <img src="{{image}}" alt="">
-      <h2><span>{{title}}</span></h2>
-      <a href="#">
-        <h3>Read more...</h3>
-      </a>
-      <div class="hidden-description">
-        <p>{{description}}</p>
-      </div>
+      <section>
+        <img src="{{image}}" alt="">
+        <h2><span>{{title}}</span></h2>
+        <a href="#">
+          <h3>Read more...</h3>
+        </a>
+        <div class="hidden-description">
+          <p>{{description}}</p>
+        </div>
+      </section>
     </script>
   </head>
   <body>
