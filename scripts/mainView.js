@@ -15,14 +15,14 @@ featureView.handleMainNav = function() {
     $(`#${selection}-content`).fadeIn(700);
   });
   // this loads the first tab of the main nav on page load.
-  $('.main-nav .tab:first').click();
+  // $('.main-nav li.tab:first').click();
 }
 
-featureView.initIndexPage = function () {
-  Project.all.forEach(function(projectObject){
-    $('#projects-content').append(projectObject.toHtml());
+featureView.initIndexPage = function() {
+  Project.all.forEach(function(project){
+    $('#projects-content').append(project.toHtml());
   });
-
+  //SOMETHING HERE IS GOING INTO A LOOP AND CONTINUOUSLY RELOADING THE PAGE.
   featureView.handleMainNav();
 };
 

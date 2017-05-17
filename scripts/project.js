@@ -12,21 +12,22 @@ function Project (rawDataObj) {
 Project.all = [];
 
 Project.prototype.toHtml = function () {
-  let compileProject = Handlebars.compile($('#projects-template').html());
+  let compileProject = Handlebars.compile($('#projects-template').text());
   return compileProject(this);
 };
 
-Project.loadAll = function (projectRawData){
-  projectRawData.forEach(function(projectObject){
+Project.loadAll = function (rawData){
+  rawData.forEach(function(projectObject){
   Project.all.push(new Project(projectObject));
-});
+  });
+};
 
 Project.fetchAll = function() {
-  if (localStorage.projectRawData) {
-    Project.loadAll(JSON.parse(localStorage.projectRawData));
+  if (localStorage.rawData) {
+    Project.loadAll(JSON.parse(localStorage.rawData));
     featureView.initIndexPage();
   } else {
-    $.getJSON('projectRawData.json')
+    $.getJSON('/projectRawData.json')
       .then(
         //starting my success callback
         function(data) {
@@ -34,9 +35,10 @@ Project.fetchAll = function() {
           localStorage.setItem('rawData', JSON.stringify(Project.all));
           featureView.initIndexPage();
         },
-        function(err){
+        //starting my failure callback
+        function(err) {
           console.error(err);
         }
-      )
+      );
   }
-};
+}
