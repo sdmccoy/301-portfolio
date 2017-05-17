@@ -24,5 +24,5 @@ var projectRawData = [
     publishedOn: 'February 2017',
     category: 'websites',
     description: 'Bus Mall is an application for a market research firm to gather user data on product popularity. The app will generate 3 random Bus Mall product images for the user to choose from. The choice is stored in local storage and populated to a graphical visual displaying the results. The results are then used for the Bus Mall company to include the most popular products in their magazine.'
-  },
+  }
 ];

@@ -1,7 +1,5 @@
 'use strict';
 
-var projects = [];
-
 function Project (rawDataObj) {
   this.url = rawDataObj.url;
   this.image = rawDataObj.image;
@@ -11,16 +9,34 @@ function Project (rawDataObj) {
   this.description = rawDataObj.description;
 }
 
+Project.all = [];
+
 Project.prototype.toHtml = function () {
-  let newProject = $('#projects-template').html();
-  let compileProject = Handlebars.compile(newProject);
+  let compileProject = Handlebars.compile($('#projects-template').html());
   return compileProject(this);
 };
 
-projectRawData.forEach(function(projectObject){
-  projects.push(new Project(projectObject));
+Project.loadAll = function (projectRawData){
+  projectRawData.forEach(function(projectObject){
+  Project.all.push(new Project(projectObject));
 });
 
-projects.forEach(function(project) {
-  $('#projects-content').append(project.toHtml());
-});
+Project.fetchAll = function() {
+  if (localStorage.projectRawData) {
+    Project.loadAll(JSON.parse(localStorage.projectRawData));
+    featureView.initIndexPage();
+  } else {
+    $.getJSON('projectRawData.json')
+      .then(
+        //starting my success callback
+        function(data) {
+          Project.loadAll(data);
+          localStorage.setItem('rawData', JSON.stringify(Project.all));
+          featureView.initIndexPage();
+        },
+        function(err){
+          console.error(err);
+        }
+      )
+  }
+};

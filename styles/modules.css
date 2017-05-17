@@ -21,18 +21,27 @@
     font-size: 100%;
   }
 
-  section {
+  /*section.template {
     width: 40%;
     margin: 10% 5%;
     border: 8px solid black;
     float: left;
-  }
+  }*/
 }
 
 @media screen and (min-width: 640px) {
+
   section {
-    width: 30%;
+    width: 100%;
+    border: 8px solid red;
+  }
+
+  div.projects-section {
+    width: 25%;
     margin: 10% 4.16%;
+    border: 8px solid black;
+    position: relative;
+    float: left;
   }
 
   .main-nav li {
