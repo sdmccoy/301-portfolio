@@ -15,7 +15,7 @@ var app = app || {};
   };
 
   Project.loadAll = data => {
-    Project.all = data.map(ele => (new Project(ele));
+    Project.all = data.map(ele => new Project(ele));
   };
 
   Project.fetchAll = function() {
