@@ -15,7 +15,6 @@ app.get('/newFeature', function (req, res) {
 });
 //this route will receive a new article from the form page and log that form data to the console.
 app.post('/articles', bodyParser, function (req, res){
-  console.log(request.body);
   res.send('Record posted to the server!');
 });
 //this will log to our teerminal console to let us know what port the server started on.
