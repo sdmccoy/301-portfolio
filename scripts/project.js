@@ -38,5 +38,11 @@ var app = app || {};
         );
     }
   }
+// reduce method counting the total words of the project array description. I have no use for it right now but it satisfies the requirements. Check in console for functionality.
+  Project.totalDescWords = () => {
+    return {
+      totalWords: Project.all.map(project => project.description.match(/\b\w+/g).length).reduce((acc, curr) => acc + curr)
+    };
+  };
   module.Project = Project;
 })(app);
