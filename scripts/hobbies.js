@@ -1,5 +1,5 @@
 'use strict';
-
+// TODO set up for JSON data file or make project a universal feature array
 const hobbies = [];
 
 function Hobbies (rawDataObj) {

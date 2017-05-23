@@ -4,7 +4,7 @@
 const express = require('express');
 const bodyParser = require('body-parser').urlencoded({extended: true});
 //creating a constant to use for directing the port
-const PORT = process.env.PORT || 5234;
+const PORT = process.env.PORT || 5181;
 //instantiating the express package.
 const app = express();
 //including the static resource express as an argument.
@@ -15,7 +15,6 @@ app.get('/newFeature', function (req, res) {
 });
 //this route will receive a new article from the form page and log that form data to the console.
 app.post('/articles', bodyParser, function (req, res){
-  console.log(request.body);
   res.send('Record posted to the server!');
 });
 //this will log to our teerminal console to let us know what port the server started on.

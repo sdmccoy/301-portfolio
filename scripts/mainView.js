@@ -1,28 +1,27 @@
 'use strict';
 
-// $('document').ready(function(){
-//   $('section.template').hide();
-//   $('#home-content').fadeIn(250);
-// });
+var app = app || {};
 
-const featureView = {};
+(function(module){
 
-featureView.handleMainNav = function() {
-  $('.main-nav').on('click', '.tab', function(){
-    $('.tab-content').hide();
-    let selection = $(this).data('content');
-    return $(`#${selection}-content`).fadeIn(700);
-  });
-  // this loads the first tab of the main nav on page load.
-  //SOMETHING HERE IS GOING INTO A LOOP AND CONTINUOUSLY RELOADING THE PAGE.
-  $('main-nav .tab:first').click();
-}
+  const featureView = {};
 
-featureView.initIndexPage = function() {
-  Project.all.forEach(function(project){
-    $('#projects-content').append(project.toHtml());
-  });
-  featureView.handleMainNav();
-};
+  featureView.handleMainNav = function() {
+    $('.main-nav').on('click', '.tab', function(){
+      $('.tab-content').hide();
+      let selection = $(this).data('content');
+      console.log(selection);
+      $(`#${selection}-content`).fadeIn(700);
+    });
+    $('.main-nav li:first').click();
+  }
 
+  featureView.initIndexPage = function() {
+    app.Project.all.forEach(function(project){
+      $('#projects-content').append(project.toHtml());
+    });
+    featureView.handleMainNav();
+  };
+  module.featureView = featureView;
+})(app);
 // TODO put in featureViewsetTeaser function to expand the descriptions
