@@ -1,6 +1,5 @@
 'use strict';
 
-var app = app || {};
 
 const featureView = {};
 

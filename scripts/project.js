@@ -1,12 +1,11 @@
 'use strict';
 
-function Project (rawDataObj) {
-  this.url = rawDataObj.url;
-  this.image = rawDataObj.image;
-  this.title = rawDataObj.title;
-  this.publishedOn = rawDataObj.publishedOn;
-  this.category = rawDataObj.category;
-  this.description = rawDataObj.description;
+var app = app || {};
+
+(function(module) {
+  function Project (rawDataObj) {
+    Object.keys(rawDataObj).forEach(key =>
+    this[key] = rawDataObj[key]);
 }
 
 Project.all = [];
@@ -42,3 +41,4 @@ Project.fetchAll = function() {
       );
   }
 }
+})(app);
