@@ -7,7 +7,7 @@ var app = app || {};
   websitesController.index = function(){
     app.Project.fetchAll(app.featureView.initIndexPage);
     $('.tab-content').hide();
-    $('#project-content').fadeIn(750);
+    $('#projects-content').fadeIn(750);
   }
   modules.websitesController = websitesController;
 })(app);
