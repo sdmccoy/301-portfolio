@@ -6,21 +6,11 @@ var app = app || {};
 
   const featureView = {};
 
-  featureView.handleMainNav = function() {
-    $('.main-nav').on('click', '.tab', function(){
-      $('.tab-content').hide();
-      let selection = $(this).data('content');
-      console.log(selection);
-      $(`#${selection}-content`).fadeIn(700);
-    });
-    $('.main-nav li:first').click();
-  }
-
   featureView.initIndexPage = function() {
     app.Project.all.forEach(function(project){
       $('#projects-content').append(project.toHtml());
     });
-    featureView.handleMainNav();
+    // featureView.handleMainNav();
   };
   module.featureView = featureView;
 })(app);
