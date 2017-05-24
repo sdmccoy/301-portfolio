@@ -13,6 +13,10 @@ app.use(express.static('.'));
 app.get('/newFeature', function (req, res) {
   res.sendFile('newFeature.html', {root: '.'});
 });
+//single page app routes for all nav bar tabs.
+app.get('/websites', (req, res) => {
+  res.sendFile('index.html', {root: './public'});
+});
 //this route will receive a new article from the form page and log that form data to the console.
 app.post('/articles', bodyParser, function (req, res){
   res.send('Record posted to the server!');
