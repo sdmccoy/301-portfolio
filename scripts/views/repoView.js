@@ -5,6 +5,11 @@ var app = app || {};
 (function(module){
   const repoView = {};
 
+  let compileRepos = Handlebars.compile($('#repo-template').text());
+
+  repoView.initIndexPage = function(){
+    $('#repos-content').append(app.repos.with('name').map(compileRepos));
+  }
 
   module.repoView = repoView;
 })(app);
