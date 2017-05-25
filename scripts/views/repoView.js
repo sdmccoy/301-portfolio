@@ -9,7 +9,7 @@ var app = app || {};
 
   repoView.initIndexPage = function(){
     $('#repos-content').append(app.repos.with('name').map(compileRepos));
-  }
+  };
 
   module.repoView = repoView;
 })(app);

@@ -10,7 +10,6 @@ var app = app || {};
     app.Project.all.forEach(function(project){
       $('#projects-content').append(project.toHtml());
     });
-    // featureView.handleMainNav();
   };
   module.featureView = featureView;
 })(app);

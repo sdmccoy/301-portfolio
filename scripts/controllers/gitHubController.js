@@ -5,7 +5,7 @@ var app = app || {};
 (function(modules){
   const gitHubController = {};
   gitHubController.index = function(){
-    app.repos.fetchRepos(app.reposView.initIndexPage);
+    app.repos.fetchRepos(app.repoView.initIndexPage);
     $('.tab-content').hide();
     $('#repos-content').fadeIn(750);
   }
