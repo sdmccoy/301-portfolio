@@ -37,6 +37,21 @@
         </div>
       </div>
     </script>
+    <!-- Start of handlebars template for repositories -->
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank">
+          <h3>{{name}}</h3>
+        </a>
+        <p>Description: {{description}}</p>
+        <p>Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
+    </script>
   </head>
   <body>
     <header>
@@ -47,10 +62,10 @@
       <nav class="main-nav">
         <i class="fa fa-bars" aria-hidden="true"></i>
         <ul>
-          <a id="home-tab" href="#"><li id="home-page" class="tab" data-content="home"><i class="fa fa-home" aria-hidden="true"></i>Home</li></a>
-          <a id="projects-tab" href="#"><li class="tab" data-content="projects"><i class="fa fa-globe" aria-hidden="true"></i>Websites</li></a>
+          <a id="home-tab" href="/"><li id="home-page" class="tab" data-content="home"><i class="fa fa-home" aria-hidden="true"></i>Home</li></a>
+          <a id="projects-tab" href="/websites"><li class="tab" data-content="projects"><i class="fa fa-globe" aria-hidden="true"></i>Websites</li></a>
           <a id="pens-tab" href="#"><li class="tab" data-content="pens"><i class="fa fa-codepen" aria-hidden="true"></i>Pens</li></a>
-          <a id="git-tab" href="https://github.com/sdmccoy" target="_blank"><li class="tab" data-content="git"><i class="fa fa-github" aria-hidden="true"></i>Git</li></a>
+          <a id="git-tab" href="/github" target=""><li class="tab" data-content="git"><i class="fa fa-github" aria-hidden="true"></i>Git</li></a>
           <a id="hobbies-tab" href="#"><li class="tab" data-content="hobbies"><i class="fa fa-futbol-o" aria-hidden="true"></i>Hobbies</li></a>
           <a id="linkedin-tab" href="https://www.linkedin.com/in/sdmccoy/" target="_blank"><li class="tab" data-content="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</li></a>
         </ul>
@@ -70,19 +85,38 @@
       <section id="hobbies-content" class="tab-content" data-category="cat">
 
       </section>
+      <section id="repos-content" class="tab-content" data-category="cat">
+
+      </section>
     </main>
     <footer>
 
     </footer>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+
+<!-- Auth token -->
+    <script src="githubtoken.js"></script>
+<!-- Script files for projects -->
     <script src="scripts/projectsRawData.js"></script>
-    <script src="scripts/project.js"></script>
+    <script src="scripts/models/project.js"></script>
+    <script src="scripts/views/mainView.js"></script>
+    <script src="scripts/controllers/websitesController.js"></script>
+<!-- Script files for hobbies -->
     <script src="scripts/hobbiesRawData.js"></script>
-    <script src="scripts/hobbies.js"></script>
-    <script src="scripts/hobbiesView.js"></script>
-    <script src="scripts/pens.js"></script>
-    <script src="scripts/mainView.js"></script>
+    <script src="scripts/models/hobbies.js"></script>
+    <script src="scripts/views/hobbiesView.js"></script>
+<!-- Script files for repos/github -->
+    <script src="scripts/models/repo.js"></script>
+    <script src="scripts/views/repoView.js"></script>
+    <script src="scripts/controllers/gitHubController.js"></script>
+<!-- Script files for pens -->
+    <script src="scripts/models/pens.js"></script>
+<!-- Controllers  -->
+    <script src="scripts/controllers/homeController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
+
     <script>
       app.Project.fetchAll();
     </script>

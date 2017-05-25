@@ -13,6 +13,7 @@ app.use(express.static('.'));
 app.get('/newFeature', function (req, res) {
   res.sendFile('newFeature.html', {root: '.'});
 });
+
 //this route will receive a new article from the form page and log that form data to the console.
 app.post('/articles', bodyParser, function (req, res){
   res.send('Record posted to the server!');
