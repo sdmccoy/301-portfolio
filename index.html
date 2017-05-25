@@ -51,7 +51,7 @@
           <p>{{watchers_count}} watching this repo</p>
         {{/if}}
       </li>
-</script>
+    </script>
   </head>
   <body>
     <header>
@@ -65,7 +65,7 @@
           <a id="home-tab" href="/"><li id="home-page" class="tab" data-content="home"><i class="fa fa-home" aria-hidden="true"></i>Home</li></a>
           <a id="projects-tab" href="/websites"><li class="tab" data-content="projects"><i class="fa fa-globe" aria-hidden="true"></i>Websites</li></a>
           <a id="pens-tab" href="#"><li class="tab" data-content="pens"><i class="fa fa-codepen" aria-hidden="true"></i>Pens</li></a>
-          <a id="git-tab" href="#" target=""><li class="tab" data-content="git"><i class="fa fa-github" aria-hidden="true"></i>Git</li></a>
+          <a id="git-tab" href="/github" target=""><li class="tab" data-content="git"><i class="fa fa-github" aria-hidden="true"></i>Git</li></a>
           <a id="hobbies-tab" href="#"><li class="tab" data-content="hobbies"><i class="fa fa-futbol-o" aria-hidden="true"></i>Hobbies</li></a>
           <a id="linkedin-tab" href="https://www.linkedin.com/in/sdmccoy/" target="_blank"><li class="tab" data-content="linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn</li></a>
         </ul>
@@ -95,26 +95,27 @@
     <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
-<!-- Data -->
-    <script src="scripts/projectsRawData.js"></script>
-    <script src="scripts/hobbiesRawData.js"></script>
-<!-- Modules -->
-    <script src="scripts/modules/project.js"></script>
-    <script src="scripts/modules/hobbies.js"></script>
-    <script src="scripts/modules/pens.js"></script>
-    <script src="scripts/modules/repo.js"></script>
-<!-- Views -->
-<script src="scripts/views/mainView.js"></script>
-<script src="scripts/views/hobbiesView.js"></script>
-<script src="scripts/views/repoView.js"></script>
 
-<!-- Controllers  -->
-    <script src="scripts/controllers/websitesController.js"></script>
-    <script src="scripts/controllers/homeController.js"></script>
-    <script src="scripts/controllers/gitHubController.js"></script>
-    <script src="scripts/controllers/routes.js"></script>
 <!-- Auth token -->
     <script src="githubtoken.js"></script>
+<!-- Script files for projects -->
+    <script src="scripts/projectsRawData.js"></script>
+    <script src="scripts/models/project.js"></script>
+    <script src="scripts/views/mainView.js"></script>
+    <script src="scripts/controllers/websitesController.js"></script>
+<!-- Script files for hobbies -->
+    <script src="scripts/hobbiesRawData.js"></script>
+    <script src="scripts/models/hobbies.js"></script>
+    <script src="scripts/views/hobbiesView.js"></script>
+<!-- Script files for repos/github -->
+    <script src="scripts/models/repo.js"></script>
+    <script src="scripts/views/repoView.js"></script>
+    <script src="scripts/controllers/gitHubController.js"></script>
+<!-- Script files for pens -->
+    <script src="scripts/models/pens.js"></script>
+<!-- Controllers  -->
+    <script src="scripts/controllers/homeController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
 
     <script>
       app.Project.fetchAll();

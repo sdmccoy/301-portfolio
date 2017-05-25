@@ -20,10 +20,5 @@ var app = app || {};
       callback();
     });
   }
-  repos.with = attr => {
-    repos.all.filter(repo => {
-      repo[attr]
-    });
-  }
   module.repos = repos;
 })(app);
