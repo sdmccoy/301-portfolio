@@ -21,7 +21,7 @@ var app = app || {};
   Project.fetchAll = function() {
     if (localStorage.rawData) {
       Project.loadAll(JSON.parse(localStorage.rawData));
-      // app.featureView.initIndexPage();
+      app.featureView.initIndexPage();
     } else {
       $.getJSON('/projectRawData.json')
         .then(
