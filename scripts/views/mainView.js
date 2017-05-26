@@ -12,7 +12,7 @@ var app = app || {};
     });
   }
 
-  featureView.setTabColor = function(ctx){
+  featureView.setIconColor = function(ctx){
     console.log(ctx);
     $('i.fa.fa-globe').css('color', `yellow`);
   }
