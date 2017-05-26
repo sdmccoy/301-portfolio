@@ -8,6 +8,7 @@ var app = app || {};
     app.Project.fetchAll(app.featureView.initIndexPage);
     $('.tab-content').hide();
     $('#projects-content').fadeIn(750);
+    app.featureView.setTabColor();
   }
   modules.websitesController = websitesController;
 })(app);
